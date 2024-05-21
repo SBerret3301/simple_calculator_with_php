@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator h2 {
+            margin-bottom: 20px;
+        }
+        .calculator input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .calculator input[type="radio"] {
+            margin: 0 5px;
+        }
+        .calculator label {
+            margin-right: 10px;
+        }
+        .calculator input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .calculator input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+        <form action="cal.php" method="POST">
+            <input type="text" name="num1" placeholder="First number" required><br>
+            <input type="text" name="num2" placeholder="Second number" required><br>
+            
+            <label><input type="radio" name="operator" value="add" required> + </label>
+            <label><input type="radio" name="operator" value="subtract" required> - </label>
+            <label><input type="radio" name="operator" value="multiply" required> * </label>
+            <label><input type="radio" name="operator" value="divide" required> / </label><br><br>
+            
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</body>
+</html>
